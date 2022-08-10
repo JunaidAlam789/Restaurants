@@ -16,7 +16,13 @@
 } */
 exports.handler = async function (event, context) {
     let name = event.path.split("/").pop()
-    if (name === "Pakistani") {
+    if (name === "Indian") {
+        return {
+          statusCode: 200,
+          headers: { "Cache-Control": "max-age=10" },
+          body: JSON.stringify({ name: "Indian" })
+        }
+      } else    if (name === "Pakistani") {
 //const dotenv = require("dotenv")
 //dotenv.config()
 const mongodb = require("mongodb")
@@ -45,7 +51,7 @@ client.connect( err=> {
             headers: { "Cache-Control": "max-age=10" },
             body: JSON.stringify({message: "Restaurants Hello."})
           }
-      
+          
         
       } else {
         //res.json("You do not currently have any restaurant in this cuisine collection.")
