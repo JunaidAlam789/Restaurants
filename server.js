@@ -37,7 +37,7 @@ client.connect( err=> {
       const rest = await db.collection("restaurants").find({ cuisine: "Pakistani" }).toArray()
       if (rest.length) {
         //res.json(rest)
-        //console.log(rest);
+        console.log(rest);
         client.close();
         return {
             statusCode: 200,
