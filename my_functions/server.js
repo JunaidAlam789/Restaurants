@@ -32,8 +32,8 @@ exports.handler = async function (event, context) {
       //let restname = req.params.restname;
       //var restaurant;
       //var restlist=[];
-      const uri = "mongodb+srv://testdb:testdb123@cluster0.2yklpfd.mongodb.net/?retryWrites=true&w=majority";
-      const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+      //const uri = "mongodb+srv://testdb:testdb123@cluster0.2yklpfd.mongodb.net/?retryWrites=true&w=majority";
+      //const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
        try{
      // client.connect(err => {
           //const collection = client.db("sample_restaurants").collection("restaurants");
