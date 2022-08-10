@@ -1,3 +1,15 @@
+const path = require("path")
+const express = require("express")
+const app = express()
+const cors = require('cors');
+
+app.use(express.static(path.join(__dirname, "public")))
+
+app.use(cors());
+var restaurant;
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const { async } = require("regenerator-runtime");
+
 exports.handler = async function (event, context) {
   const uri = "mongodb+srv://testdb:testdb123@cluster0.2yklpfd.mongodb.net/?retryWrites=true&w=majority";
       const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
