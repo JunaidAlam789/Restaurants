@@ -33,7 +33,7 @@ const uri = "mongodb+srv://testdb:testdb123@cluster0.2yklpfd.mongodb.net/?retryW
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 //process.env.CONNECTIONSTRING
-console.log("hello1");
+console.log(name,"hello1");
 client.connect( err=> {
     async function run (){
  // app.get("/", async (req, res) => {
@@ -45,7 +45,7 @@ client.connect( err=> {
       if (rest.length) {
         //res.json(rest)
         console.log(rest);
-        client.close();
+        
         return {
             statusCode: 200,
             headers: { "Cache-Control": "max-age=10" },
@@ -55,7 +55,7 @@ client.connect( err=> {
         
       } else {
         //res.json("You do not currently have any restaurant in this cuisine collection.")
-        client.close();
+        
         return {
             statusCode: 200,
             headers: { "Cache-Control": "max-age=10" },
@@ -66,7 +66,7 @@ client.connect( err=> {
     } catch (err) {
       console.log(err)
       //res.json("Try again later.")
-      client.close();
+      
       return {
         statusCode: 404,
         headers: { "Cache-Control": "max-age=10" },
@@ -76,16 +76,17 @@ client.connect( err=> {
 
       
     }
-    finally{
-      client.close();
+    //finally{
+     // client.close();
       
-    }
+    //}
     
  // }) //app get closing
   } // async anonymous function closing
   run()
   //app.listen(process.env.PORT || 3000)
 });
+//client.close();
     }
 }
  //app.listen(process.env.PORT || 3000)
