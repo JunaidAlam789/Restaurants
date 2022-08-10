@@ -33,8 +33,9 @@ client.connect( err=> {
  // app.get("/", async (req, res) => {
     console.log("hello2");
     try {
-        const db = client.db("sample_restaurants");
-      const rest = await db.collection("restaurants").find({ cuisine: "Pakistani" }).toArray()
+       // const db = client.db("sample_restaurants");
+     // const rest = await db.collection("restaurants").find({ cuisine: "Pakistani" }).toArray()
+     rest= ["hotel1","hotel2","hotel3"];
       if (rest.length) {
         //res.json(rest)
         console.log(rest);
