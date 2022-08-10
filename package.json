@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm-run-all -p backend frontend",
+    "build": "webpack",
     "dev": "npm-run-all -p backend frontend",
     "backend": "nodemon server.js --ignore './frontend-src/' --ignore './public'",
     "frontend": "webpack --watch",
@@ -32,6 +32,7 @@
     "react-select": "^5.4.0",
     "regenerator-runtime": "^0.13.7",
     "webpack": "^5.2.0",
-    "webpack-cli": "^4.1.0"
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^4.9.3"
   }
 }
