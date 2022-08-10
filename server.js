@@ -42,7 +42,7 @@ client.connect( err=> {
         return {
             statusCode: 200,
             headers: { "Cache-Control": "max-age=10" },
-            body: JSON.stringify(rest)
+            body: JSON.stringify({message: "Restaurants Hello."})
           }
       
         
