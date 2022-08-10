@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm-run-all -p backend frontend",
     "dev": "npm-run-all -p backend frontend",
     "backend": "nodemon server.js --ignore './frontend-src/' --ignore './public'",
     "frontend": "webpack --watch",
