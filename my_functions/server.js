@@ -25,15 +25,17 @@ const uri = "mongodb+srv://testdb:testdb123@cluster0.2yklpfd.mongodb.net/?retryW
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 //process.env.CONNECTIONSTRING
-
+console.log("hello1");
 client.connect( err=> {
-  
-  app.get("/", async (req, res) => {
+    async function run (){
+ // app.get("/", async (req, res) => {
+    console.log("hello2");
     try {
         const db = client.db("sample_restaurants");
       const rest = await db.collection("restaurants").find({ cuisine: "Pakistani" }).toArray()
       if (rest.length) {
         //res.json(rest)
+        //console.log(rest);
         client.close();
         return {
             statusCode: 200,
@@ -70,12 +72,14 @@ client.connect( err=> {
       
     }
     
-  })
-
+ // }) //app get closing
+  } // async anonymous function closing
+  run()
   //app.listen(process.env.PORT || 3000)
 });
 
 }
+ //app.listen(process.env.PORT || 3000)
 
 
 
