@@ -20,10 +20,10 @@ exports.handler = async function (event, context) {
         return {
           statusCode: 200,
           headers: { "Cache-Control": "max-age=10" },
-          body: {
+          body:JSON.stringify( {
             American: "American",
             Pakistani: "Pakistani",
-            Indian: "Indian"  }
+            Indian: "Indian"  })
         }
       } else    if (name === "Pakistani") {
 //const dotenv = require("dotenv")
