@@ -14,7 +14,7 @@ exports.handler = async function (event, context) {
          
  
       const restlist= ["Roti Boti Restaurant","Bukhari Restaurant","Pakiza Restaurant","Gourmet Sweets","Indo-Pak Halal Restaurant","Starlight Grill Restaurant & Sweets","Johal Deli","Shandar Sweet & Restaurant","Lasani Restaurant","Super Skyway Restaurant","Mithaas","Gyro King","Mashallah Sweets And Restaurant","Salt And Pepper Diner","Gourmet Restaurant","New Punjab Restaurant & Grill","Curry King","Tawa Tandoor","Aman Restaurant","Al Naimat Restaurant & Sweets","Basera Restaurant","Chatkhara Grill","Desi Shack","Chatkhara Restaurant","Curry Kabab","Pakistan Tea House","Bar-B-Q Tonight","Kabab House","Kababish","Bbq Village","Bismillah Kabab & Curry"];
-      if (rest.length) {
+      if (restlist.length) {
         
         console.log(restlist);
         //rest= ["hotel1","hotel2","hotel3"];
