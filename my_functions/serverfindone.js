@@ -20,28 +20,22 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 console.log(name,"hello1");
 client.connect( err=> {
     async function run (){
- // app.get("/", async (req, res) => {
     console.log("hello2");
     try {
-       // const db = client.db("sample_restaurants");
-     // const rest = await db.collection("restaurants").find({ cuisine: "Pakistani" }).toArray()
+     
      const database = client.db('sample_restaurants');
      const restaurants = database.collection('restaurants');
     // const query = { name: `${restname}` };
-     const query = { name: "Subway" };
-     const rest = await restaurants.findOne(query);
-    // rest= ["hotel1","hotel2","hotel3"];
-      
-        console.log(rest);
+     //const query = { name: "Subway" };
+     //const rest = await restaurants.findOne(query);
+       
+    console.log(restaurants);
 
-      // since this method returns the matched document, not a cursor, print it directly
-      //console.log(restaurant);
-      //res.json(restaurant);
-        
+     
         return {
             statusCode: 200,
             headers: { "Cache-Control": "max-age=10" },
-            body: JSON.stringify(rest)
+            body: JSON.stringify(restaurants)
           }
           
         
