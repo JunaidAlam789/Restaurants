@@ -53,7 +53,10 @@ console.log(name,"hello1");
         return( {
             statusCode: 200,
             headers: { "Cache-Control": "max-age=100" },
-            body: JSON.stringify({restlist})
+            body: JSON.stringify({
+              American: "American",
+              Pakistani: "Pakistani",
+              Indian: "Indian"  })
           })
           
         
