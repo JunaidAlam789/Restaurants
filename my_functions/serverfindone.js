@@ -27,13 +27,14 @@ client.connect( async (err)=> {
        
     console.log(subway);
     client.close();
-    }).then(()=>{
-      return   ({
-            statusCode: 200,
-            headers: { "Cache-Control": "max-age=10" },
-            body: JSON.stringify(subway)
-          })
-        })
+    return   ({
+      statusCode: 200,
+      headers: { "Cache-Control": "max-age=10" },
+      body: JSON.stringify(subway)
+    })
+    })
+      
+        
     
   //}) //app get closing
  // } // async anonymous function closing
