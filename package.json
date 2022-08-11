@@ -17,7 +17,7 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
-    "axios": "^0.21.0",
+    "axios": "^0.21.4",
     "babel-loader": "^8.1.0",
     "core-js": "^3.6.5",
     "cors": "^2.8.5",
