@@ -22,9 +22,9 @@ const pass = (body) => {callback( null, {
   statusCode: 200,
   body: JSON.stringify(body)
 })}
-client.connect( async (err)=> {
+client.connect(  (err)=> {
    })
-   // client.close();
+   client.close();
   //  async function run (){
     console.log("hello2");
        
