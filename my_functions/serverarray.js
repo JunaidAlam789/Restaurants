@@ -50,14 +50,14 @@ console.log(name,"hello1");
         //res.json(rest)
         console.log(restlist);
         //rest= ["hotel1","hotel2","hotel3"];
-        return( {
+        return {
             statusCode: 200,
             headers: { "Cache-Control": "max-age=100" },
             body: JSON.stringify({
               American: "American",
               Pakistani: "Pakistani",
               Indian: "Indian"  })
-          })
+          }
           
         
       } else {
