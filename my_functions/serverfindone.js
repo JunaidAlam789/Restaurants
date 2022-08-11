@@ -22,7 +22,9 @@ const pass = (body) => {callback( null, {
   statusCode: 200,
   body: JSON.stringify(body)
 })}
-//client.connect( async (err)=> {
+client.connect( async (err)=> {
+   })
+    client.close();
   //  async function run (){
     console.log("hello2");
        
@@ -36,8 +38,7 @@ const pass = (body) => {callback( null, {
     console.log(subway);
     pass(subway)
     
-    //})
-   // client.close();
+   
     /* return   ({
       statusCode: 200,
       headers: { "Cache-Control": "max-age=10" },
