@@ -53,7 +53,7 @@ client.connect( err=> {
         return( {
             statusCode: 200,
             headers: { "Cache-Control": "max-age=100" },
-            body: JSON.stringify(restlist)
+            body: JSON.stringify({restlist})
           })
           
         
