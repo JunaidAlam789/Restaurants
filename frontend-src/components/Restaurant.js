@@ -12,7 +12,9 @@ console.log(restname)
     async function ourRequest() {
       // in the real world you would want to cancel this Axios request using React's return/cleanup function of useEffect, so that if a slow request was still running and the user clicked on a new link before the first request finished, the first request would be cancelled instead of eventually finishing and using data that the user is no longer interested in...
       console.log(restname) 
-      const response = await Axios(`/restaurant/${restname}`)
+     // const response = await Axios(`/restaurant/${restname}`)
+      const response = await Axios(`/.netlify/functions/subway`)
+      
       //if(response.data != null){}
       setRestaurant(response.data)
       console.log(response.data) 
