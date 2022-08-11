@@ -42,14 +42,14 @@ client.connect( err=> {
  // app.get("/", async (req, res) => {
     console.log("hello2");
     try {
-        const db = client.db("sample_restaurants");
-      const rest = await db.collection("restaurants").find({ cuisine: "Pakistani" }).toArray()
-     //rest= ["hotel1","hotel2","hotel3"];
+       // const db = client.db("sample_restaurants");
+      //const rest = await db.collection("restaurants").find({ cuisine: "Pakistani" }).toArray()
+      const rest= [{name: "hotel1", name: "hotel2", name: "hotel3"}];
       if (rest.length) {
         const restlist=rest.map((rest1)=>{return rest1.name})
         //res.json(rest)
         console.log(restlist);
-        
+        //rest= ["hotel1","hotel2","hotel3"];
         return( {
             statusCode: 200,
             headers: { "Cache-Control": "max-age=100" },
