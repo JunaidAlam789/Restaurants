@@ -12,13 +12,13 @@ exports.handler = async function (event, context) {
 const mongodb = require("mongodb")
 const express = require("express")
 const app = express()
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://testdb:testdb123@cluster0.2yklpfd.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+//const { MongoClient, ServerApiVersion } = require('mongodb');
+//const uri = "mongodb+srv://testdb:testdb123@cluster0.2yklpfd.mongodb.net/?retryWrites=true&w=majority";
+//const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 //process.env.CONNECTIONSTRING
 console.log(name,"hello1");
-client.connect( err=> {
+//client.connect( err=> {
     async function run (){
     console.log("hello2");
     try {
@@ -72,7 +72,7 @@ client.connect( err=> {
   } // async anonymous function closing
   run()
   //app.listen(process.env.PORT || 3000)
-});
+//});
 //client.close();
     }
 }
