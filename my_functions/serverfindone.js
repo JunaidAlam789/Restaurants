@@ -21,7 +21,7 @@ console.log(name,"hello1");
 //client.connect( err=> {
     async function run (){
     console.log("hello2");
-    try {
+    
      
     // const database = client.db('sample_restaurants');
     // const restaurants = database.collection('restaurants');
@@ -38,44 +38,18 @@ console.log(name,"hello1");
             headers: { "Cache-Control": "max-age=10" },
             body: JSON.stringify(restaurants)
           }
-          
-        
-       /* else {
-        //res.json("You do not currently have any restaurant in this cuisine collection.")
-        
-        return {
-            statusCode: 200,
-            headers: { "Cache-Control": "max-age=10" },
-            body: JSON.stringify({ message: "Restaurant not found." })
-          }
-      
-      } */
-    } catch (err) {
-      console.log(err)
-      //res.json("Try again later.")
-      
-      return {
-        statusCode: 404,
-        headers: { "Cache-Control": "max-age=10" },
-        body: JSON.stringify({ message: "error." })
-      }
-      
-
-      
-    }
-    //finally{
-     // client.close();
-      
-    //}
+    
     
  // }) //app get closing
   } // async anonymous function closing
   run()
+
+
   //app.listen(process.env.PORT || 3000)
 //});
 //client.close();
-    }
-}
+    }//if
+} //handler
  //app.listen(process.env.PORT || 3000)
 
 
