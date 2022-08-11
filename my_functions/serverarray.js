@@ -22,10 +22,7 @@ exports.handler = async function (event, context) {
         return {
             statusCode: 200,
             headers: { "Cache-Control": "max-age=100" },
-            body: JSON.stringify({
-              American: "American",
-              Pakistani: "Pakistani",
-              Indian: "Indian"  })
+            body: JSON.stringify({restlist})
           }
           
         
