@@ -47,7 +47,7 @@ client.connect( err=> {
 
   //app.listen(process.env.PORT || 3000)
 });
-//client.close();
+client.close();
     }//if
 } //handler
  //app.listen(process.env.PORT || 3000)
