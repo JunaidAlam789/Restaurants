@@ -4,18 +4,10 @@ const mongodb = require("mongodb")
 //const dotenv = require("dotenv")
 //dotenv.config()
 const { MongoClient, ServerApiVersion } = require('mongodb');
+const { async } = require("regenerator-runtime");
 const uri = "mongodb+srv://testdb:testdb123@cluster0.2yklpfd.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(  (err)=> {
-       
-   const database = client.db('sample_restaurants');
-    const restaurants = database.collection('restaurants');
-   // const query = { name: `${restname}` };
-    const query = { name: "Runway69" };
-    const subway = await restaurants.findOne(query);
-    console.log(subway,"hello1");
-  })
-  client.close();
+
 
 exports.handler = async function (event, context,callback) {
  // exports.handler = async function (event, context) {
@@ -63,6 +55,18 @@ const pass = (body) => {callback( null, {
    
 } //handler
  //app.listen(process.env.PORT || 3000)
+
+ client.connect(  async(err)=> {
+       
+  const database = client.db('sample_restaurants');
+   const restaurants = database.collection('restaurants');
+  // const query = { name: `${restname}` };
+   const query = { name: "Runway69" };
+   const subway = await restaurants.findOne(query);
+   console.log(subway,"hello1");
+   await client.close();
+ })
+ //client.close();
 
 
 
