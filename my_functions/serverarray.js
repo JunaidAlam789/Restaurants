@@ -44,7 +44,7 @@ client.connect( err=> {
     try {
        // const db = client.db("sample_restaurants");
       //const rest = await db.collection("restaurants").find({ cuisine: "Pakistani" }).toArray()
-      const rest= [{name: "hotel1", name: "hotel2", name: "hotel3"}];
+      const rest= [{name: "hotel1"}, {name: "hotel2"}, {name: "hotel3"}];
       if (rest.length) {
         const restlist=rest.map((rest1)=>{return rest1.name})
         //res.json(rest)
