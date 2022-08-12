@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const client = require("./db.js")
-const db = client.db()
+const db = client.db("sample_restaurants")
 
 app.get("/", async (req, res) => {
   try {
